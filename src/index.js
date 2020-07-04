@@ -1,4 +1,5 @@
-import "./css/style.css";
+import "./media/css/style.css";
+import { homeContent } from './home.js';
 
 const renderHTML = (() => {
     const divContent = document.querySelector('#content');
@@ -11,22 +12,25 @@ const renderHTML = (() => {
                         <li data-tab-target="#menu" class="tab">Menu</li>
                         <li data-tab-target="#contact" class="tab">Contact</li>`;
 
-    const homeDiv = document.createElement('div');
-    divContent.appendChild(homeDiv);
-    homeDiv.outerHTML = `<div id="home" data-tab-content class="active"><h2>Home</h2></div>`;
+    // Home Tab
+    homeContent(divContent);
 
+    // Gallery Tab
     const galleryDiv = document.createElement('div');
     divContent.appendChild(galleryDiv);
     galleryDiv.outerHTML = `<div id="gallery" data-tab-content><h2>Gallery</h2></div>`;
 
+    // Menu Tab
     const menuDiv = document.createElement('div');
     divContent.appendChild(menuDiv);
     menuDiv.outerHTML = `<div id="menu" data-tab-content><h2>Menu</h2></div>`;
 
+    // Contact Tab
     const contactDiv = document.createElement('div');
     divContent.appendChild(contactDiv);
     contactDiv.outerHTML = `<div id="contact" data-tab-content><h2>Contact</h2></div>`;
 
+    // Tab Functionality
     const tabs = document.querySelectorAll(`[data-tab-target]`);
     const tabContents = document.querySelectorAll('[data-tab-content]');
     tabs.forEach(tab => {
@@ -38,8 +42,10 @@ const renderHTML = (() => {
             tabs.forEach(tab => {
                 tab.classList.remove('active');
             });
-            tab.classList.add('active');
-            target.classList.add('active');
+            tab.classList = 'active';
+            target.classList = 'active';
         });
     });
 })();
+
+// Put the contents of each ‘tab’ inside of it’s own module

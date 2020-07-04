@@ -6,7 +6,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            }, // Codde below here is suspect
+            }, // Code below here is suspect
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: ['file-loader']
