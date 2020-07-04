@@ -1,4 +1,4 @@
-import "./media/css/style.css";
+import "./css/style.css";
 import { homeContent } from './home.js';
 import { galleryContent } from './gallery.js';
 
