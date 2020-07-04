@@ -1,5 +1,6 @@
 import "./media/css/style.css";
 import { homeContent } from './home.js';
+import { galleryContent } from './gallery.js';
 
 const renderHTML = (() => {
     const divContent = document.querySelector('#content');
@@ -7,8 +8,8 @@ const renderHTML = (() => {
     divContent.appendChild(h1Element).textContent = "Kiyomizu Izakaya";
     const navbar = document.createElement('ul');
     divContent.appendChild(navbar).className = "navbar";
-    navbar.innerHTML = `<li data-tab-target="#home" class="tab active">Home</li>
-                        <li data-tab-target="#gallery" class="tab">Gallery</li>
+    navbar.innerHTML = `<li data-tab-target="#home" class="tab">Home</li>
+                        <li data-tab-target="#gallery" class="tab active">Gallery</li>
                         <li data-tab-target="#menu" class="tab">Menu</li>
                         <li data-tab-target="#contact" class="tab">Contact</li>`;
 
@@ -16,9 +17,7 @@ const renderHTML = (() => {
     homeContent(divContent);
 
     // Gallery Tab
-    const galleryDiv = document.createElement('div');
-    divContent.appendChild(galleryDiv);
-    galleryDiv.outerHTML = `<div id="gallery" data-tab-content><h2>Gallery</h2></div>`;
+    galleryContent(divContent);
 
     // Menu Tab
     const menuDiv = document.createElement('div');

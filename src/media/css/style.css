@@ -60,14 +60,13 @@ li.active:hover {
     display: block;
 }
 
-/* HOME CONTENT */
-
-#home {
+/* HOME TAB */
+.inner-home-div {
     margin: 0 auto;
     color: #f5f5f5;
 }
 
-#home blockquote {
+.inner-home-div blockquote {
     width: 550px;
     margin: 0 auto;
     margin-top: 8%;
@@ -84,10 +83,29 @@ li.active:hover {
     width: 20%;
 }
 
-#home h4 {
+.inner-home-div h4 {
     width: 75%;
     margin: 0 auto;
     margin-top: 6%;
     margin-bottom: 5%;
     text-align: center;
+}
+
+/* GALLERY TAB */
+
+#gallery {
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 80%;
+}
+
+.inner-gallery-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.box-image {
+    width: 100%;
 }
